@@ -17,6 +17,9 @@
   font-size: 50px;
   text-transform: uppercase;
   color: #fff;
+  text-decoration: none;
+  font-family: "Roboto", serif;
+  font-weight: 700;
   border: 2px solid white;
   padding: 100px;
   z-index: 3;

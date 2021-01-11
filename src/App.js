@@ -1,13 +1,12 @@
 import "./App.css";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Navbar } from "./components/Navbar/Navbar";
-import { useState } from "react";
-import { Jumbotron } from "./components/Jumbotron/Jumbotron";
-import { ProjectCardsContainer } from "./components/HomeProjectCard/ProjectCardsContainer";
-import { ProjectCard } from "./components/HomeProjectCard/ProjectCard";
-import { BorderedButton } from "./components/BorderedButton/BorderedButton";
-import { BigLink } from "./components/BigLink/BigLink";
-import { Footer } from "./components/Footer/Footer";
+import { lazy, Suspense, useState } from "react";
+import { Home } from "./components/Home/Home";
+
+const About = lazy(() => import("./components/About/About"));
+const Works = lazy(() => import("./components/Works/Works"));
+const Logos = lazy(() => import("./components/Logos/Logos"));
 
 function App() {
   const [popUpVisibility, setPopUpVisibility] = useState(false);
@@ -16,27 +15,53 @@ function App() {
   };
   return (
     <Router>
-      {popUpVisibility ? (
-        <Navbar
-          changePopUpVisibility={changePopUpVisibility}
-          popUpVisibility={popUpVisibility}
-        ></Navbar>
-      ) : (
-        <>
+      <Suspense fallback={<div>Loading...</div>}>
+        {popUpVisibility ? (
           <Navbar
             changePopUpVisibility={changePopUpVisibility}
             popUpVisibility={popUpVisibility}
           ></Navbar>
-          <Jumbotron></Jumbotron>
-          <ProjectCardsContainer>
-            <ProjectCard alignSelf={"flex-end"}></ProjectCard>
-            <ProjectCard alignSelf={"flex-start"}></ProjectCard>
-          </ProjectCardsContainer>
-          <BorderedButton title="all works"></BorderedButton>
-          <BigLink></BigLink>
-          <Footer></Footer>
-        </>
-      )}
+        ) : (
+          <Switch>
+            <Route
+              path="/about"
+              component={() => (
+                <About
+                  changePopUpVisibility={changePopUpVisibility}
+                  popUpVisibility={popUpVisibility}
+                />
+              )}
+            ></Route>
+            <Route
+              path="/works"
+              component={() => (
+                <Works
+                  changePopUpVisibility={changePopUpVisibility}
+                  popUpVisibility={popUpVisibility}
+                />
+              )}
+            ></Route>
+            <Route
+              path="/logos"
+              component={() => (
+                <Logos
+                  changePopUpVisibility={changePopUpVisibility}
+                  popUpVisibility={popUpVisibility}
+                />
+              )}
+            ></Route>
+            <Route
+              path="/"
+              component={() => (
+                <Home
+                  changePopUpVisibility={changePopUpVisibility}
+                  popUpVisibility={popUpVisibility}
+                />
+              )}
+            ></Route>
+          </Switch>
+        )}
+      </Suspense>
     </Router>
   );
 }
