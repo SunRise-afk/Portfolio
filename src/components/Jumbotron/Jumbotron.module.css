@@ -1,0 +1,27 @@
+.jumboContainer {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.jumboHeader {
+  margin-top: 150px;
+  font-size: 40px;
+  position: relative;
+}
+.jumboHeader::after {
+  content: attr(data-text);
+  position: absolute;
+  width: 105%;
+  top: 10px;
+  left: 10px;
+  z-index: -1;
+  color: #eee;
+}
+.jumboSubHeader {
+  margin-top: 0;
+  font-size: 20px;
+}

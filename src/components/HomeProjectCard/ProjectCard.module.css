@@ -1,0 +1,19 @@
+.cardsContainer {
+  width: 1200px;
+  margin: 0 auto;
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+}
+.cardContainer {
+  width: 700px;
+  height: 440px;
+  margin-bottom: 140px;
+  border: 2px solid black;
+}
+.cardTitle {
+  position: relative;
+  top: -25px;
+  margin: 0;
+  font-size: 25px;
+}
