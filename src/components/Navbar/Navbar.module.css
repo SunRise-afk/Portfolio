@@ -6,7 +6,7 @@
 }
 .nav .navHeader,
 .navMenuHeader {
-  margin-top: 50px;
+  margin-top: 20px;
   padding: 30px;
   font-family: "Roboto", serif;
   font-weight: 300;
@@ -26,7 +26,7 @@
   height: 50%;
   padding: 30px;
   overflow: hidden;
-  color: #000;
+  color: #000000;
 }
 .nav .navHeader.active::before {
   left: 2px;
@@ -56,7 +56,9 @@
 .nav .navHeader.active:hover::before {
   animation-play-state: running;
 }
-
+a {
+  text-decoration: none;
+}
 .menu {
   width: 100%;
   margin: 0 auto;

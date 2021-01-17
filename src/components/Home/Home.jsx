@@ -20,7 +20,10 @@ export const Home = ({ popUpVisibility, changePopUpVisibility }) => {
         <ProjectCard alignSelf={"flex-start"}></ProjectCard>
       </ProjectCardsContainer>
       <BorderedButton title="all works"></BorderedButton>
-      <BigLink></BigLink>
+      <BigLink
+        linkPathes={["/about", "/logos"]}
+        linkTitles={["about", "logos"]}
+      ></BigLink>
       <Footer></Footer>
     </>
   );

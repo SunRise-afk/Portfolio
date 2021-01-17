@@ -1,0 +1,29 @@
+.descriptionWrapper {
+  width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.descriptionRow {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+}
+.descriptionItem {
+  margin: 20px;
+  flex: 1;
+  /* text-align: center; */
+}
+.descriptionImage {
+  width: 550px;
+  height: 385px;
+  border-radius: 5px;
+}
+.descriptionItem p {
+  margin: 0;
+}
+.descriptionItem ul {
+  list-style: none;
+  padding: 0;
+}
