@@ -1,21 +1,34 @@
-import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Navbar } from "./components/Navbar/Navbar";
 import { lazy, Suspense, useState } from "react";
 import { Home } from "./components/Home/Home";
+import "./App.css";
 
 const About = lazy(() => import("./components/About/About"));
-const Works = lazy(() => import("./components/Works/Works"));
+const WorksContainer = lazy(() => import("./components/Works/WorksContainer"));
 const Logos = lazy(() => import("./components/Logos/Logos"));
 
 function App() {
   const [popUpVisibility, setPopUpVisibility] = useState(false);
+  const [isTelegramModalVisible, setIsTelegramModalVisible] = useState(false);
   const changePopUpVisibility = (value) => {
     setPopUpVisibility(value);
   };
   return (
     <Router>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense
+        fallback={
+          <>
+            <Navbar
+              changePopUpVisibility={changePopUpVisibility}
+              popUpVisibility={popUpVisibility}
+            ></Navbar>
+            <h1 style={{ textAlign: "center", marginTop: "200px" }}>
+              Loading... Please hold on.
+            </h1>
+          </>
+        }
+      >
         {popUpVisibility ? (
           <Navbar
             changePopUpVisibility={changePopUpVisibility}
@@ -29,15 +42,19 @@ function App() {
                 <About
                   changePopUpVisibility={changePopUpVisibility}
                   popUpVisibility={popUpVisibility}
+                  isTelegramModalVisible={isTelegramModalVisible}
+                  setIsTelegramModalVisible={setIsTelegramModalVisible}
                 />
               )}
             ></Route>
             <Route
               path="/works"
               component={() => (
-                <Works
+                <WorksContainer
                   changePopUpVisibility={changePopUpVisibility}
                   popUpVisibility={popUpVisibility}
+                  isTelegramModalVisible={isTelegramModalVisible}
+                  setIsTelegramModalVisible={setIsTelegramModalVisible}
                 />
               )}
             ></Route>
@@ -47,6 +64,8 @@ function App() {
                 <Logos
                   changePopUpVisibility={changePopUpVisibility}
                   popUpVisibility={popUpVisibility}
+                  isTelegramModalVisible={isTelegramModalVisible}
+                  setIsTelegramModalVisible={setIsTelegramModalVisible}
                 />
               )}
             ></Route>
@@ -56,6 +75,8 @@ function App() {
                 <Home
                   changePopUpVisibility={changePopUpVisibility}
                   popUpVisibility={popUpVisibility}
+                  isTelegramModalVisible={isTelegramModalVisible}
+                  setIsTelegramModalVisible={setIsTelegramModalVisible}
                 />
               )}
             ></Route>

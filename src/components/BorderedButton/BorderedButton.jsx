@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./BorderedButton.module.css";
 
-export const BorderedButton = ({ title }) => {
+export const BorderedButton = ({ title, link }) => {
   return (
-    <div className={styles.buttonContainer}>
-      <span>
-        <Link to="/works">{title}</Link>
-      </span>
-    </div>
+    <Link to={`/${link}`}>
+      <div className={styles.buttonContainer}>
+        <span>{title}</span>
+      </div>
+    </Link>
   );
 };

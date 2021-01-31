@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { TGModal } from "../TGModal/TGModal";
 import styles from "./Footer.module.css";
 
-export const Footer = () => {
+export const Footer = ({
+  isTelegramModalVisible,
+  setIsTelegramModalVisible,
+}) => {
   return (
     <footer className={styles.footer}>
       <div className={styles.contacts}>
@@ -17,7 +21,14 @@ export const Footer = () => {
         >
           GitHub
         </a>
-        <p>Telegram</p>
+        <p
+          onClick={() => {
+            setIsTelegramModalVisible(!isTelegramModalVisible);
+          }}
+        >
+          Telegram
+        </p>
+        <TGModal isTelegramModalVisible={isTelegramModalVisible}></TGModal>
         <a
           href="https://www.codecademy.com/profiles/SunRise1337"
           target="_blank"

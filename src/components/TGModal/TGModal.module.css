@@ -1,0 +1,41 @@
+.modal_container {
+  display: none;
+  transition: 0.5s linear;
+  position: absolute;
+  padding: 10px 30px;
+  left: 370px;
+  z-index: 100;
+  background-color: #999;
+  clip-path: polygon(
+    0% 0%,
+    90% 0,
+    90% 25%,
+    100% 35%,
+    90% 45%,
+    90% 100%,
+    0 100%
+  );
+  border-radius: 10px;
+}
+.modal_container.visible {
+  display: block;
+  transition: 0.5s linear;
+}
+.modal_container h2 {
+  font-family: "Roboto", serif;
+  text-align: center;
+  margin-top: 5px;
+}
+.modal_container .info_container {
+  display: flex;
+  align-items: center;
+}
+.modal_container .info_container i {
+  font-size: 35px;
+  color: #333;
+}
+.modal_container .info_container p {
+  font-size: 25px;
+  margin: 0 15px;
+  color: #000;
+}

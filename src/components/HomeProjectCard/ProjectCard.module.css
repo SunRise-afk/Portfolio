@@ -1,18 +1,31 @@
 .cardsContainer {
   width: 1200px;
   margin: 0 auto;
-  /* border: 2px solid black; */
   display: flex;
   flex-direction: column;
 }
 .cardContainer {
   width: 700px;
-  height: 440px;
+  height: 350px;
   margin-bottom: 140px;
-  border: 2px solid black;
+  border: 1px solid black;
+  position: relative;
+}
+.cardContainer:first-child {
+  align-self: flex-end;
+}
+.cardContainer .cardImgContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardContainer .cardImgContainer img {
+  max-width: 100%;
+  height: auto;
 }
 .cardTitle {
-  position: relative;
+  position: absolute;
   top: -25px;
   margin: 0;
   font-size: 25px;

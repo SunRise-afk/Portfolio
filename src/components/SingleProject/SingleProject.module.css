@@ -1,0 +1,75 @@
+.singleProject {
+}
+.container {
+  width: 1100px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.jumboImgContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.jumboImgContainer img {
+  max-width: 100%;
+  height: auto;
+}
+.projectDescriptionContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.projectDescriptionItem {
+  width: 48%;
+  margin-bottom: 100px;
+}
+.projectDescriptionImgContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projectDescriptionImgContainer img {
+  max-width: 100%;
+  height: auto;
+}
+.projectHeading {
+  font-family: "Roboto", serif;
+  font-weight: 700;
+  font-size: 34px;
+  color: black;
+  margin-bottom: 50px;
+}
+.projectDescription,
+.projectParagraph {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-size: 17px;
+  color: #545454;
+}
+.projectDescription {
+  margin-left: 100px;
+}
+.projectImagesRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.projectImagesRow .rowImageContainer {
+  width: 32.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projectImagesRow .rowImageContainer img {
+  width: 100%;
+  height: auto;
+}
+.buttonContainer {
+  margin-top: 70px;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { BigLink } from "../BigLink/BigLink";
 import { BorderedButton } from "../BorderedButton/BorderedButton";
 import { Footer } from "../Footer/Footer";
@@ -7,7 +8,13 @@ import { ProjectCardsContainer } from "../HomeProjectCard/ProjectCardsContainer"
 import { Jumbotron } from "../Jumbotron/Jumbotron";
 import { Navbar } from "../Navbar/Navbar";
 
-export const Home = ({ popUpVisibility, changePopUpVisibility }) => {
+export const Home = ({
+  popUpVisibility,
+  changePopUpVisibility,
+  isTelegramModalVisible,
+  setIsTelegramModalVisible,
+}) => {
+  const projects = useSelector((state) => state.works);
   return (
     <>
       <Navbar
@@ -16,15 +23,28 @@ export const Home = ({ popUpVisibility, changePopUpVisibility }) => {
       ></Navbar>
       <Jumbotron></Jumbotron>
       <ProjectCardsContainer>
-        <ProjectCard alignSelf={"flex-end"}></ProjectCard>
-        <ProjectCard alignSelf={"flex-start"}></ProjectCard>
+        <ProjectCard
+          alignRight={true}
+          projTitle={projects[0].title}
+          projImg={projects[0].jumboImg}
+          projId={projects[0].id}
+        ></ProjectCard>
+        <ProjectCard
+          alignRight={false}
+          projTitle={projects[2].title}
+          projImg={projects[2].jumboImg}
+          projId={projects[2].id}
+        ></ProjectCard>
       </ProjectCardsContainer>
-      <BorderedButton title="all works"></BorderedButton>
+      <BorderedButton title="all works" link="works"></BorderedButton>
       <BigLink
         linkPathes={["/about", "/logos"]}
         linkTitles={["about", "logos"]}
       ></BigLink>
-      <Footer></Footer>
+      <Footer
+        isTelegramModalVisible={isTelegramModalVisible}
+        setIsTelegramModalVisible={setIsTelegramModalVisible}
+      ></Footer>
     </>
   );
 };

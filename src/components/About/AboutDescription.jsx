@@ -24,9 +24,15 @@ export const AboutDescription = () => {
           <h2>My Skills</h2>
           <ul className={styles.skillsList}>
             <li>HTML & CSS</li>
+            <li>SCSS</li>
             <li>Native JavaScript</li>
             <li>React JS</li>
-            <li>Redux</li>
+            <li>Redux/React-Redux</li>
+            <li>For building Native JavaScript projects i use Webpack</li>
+            <li>
+              A litle bit React Native (with Expo CLI and React Native CLI)
+            </li>
+            <li>Adobe Photoshop</li>
           </ul>
         </div>
         <div className={styles.descriptionItem}>

@@ -7,7 +7,12 @@ import fullStackImg from "../../assets/full_stack.png";
 import { AboutDescription } from "./AboutDescription";
 import { BigLink } from "../BigLink/BigLink";
 
-const About = ({ popUpVisibility, changePopUpVisibility }) => {
+const About = ({
+  popUpVisibility,
+  changePopUpVisibility,
+  isTelegramModalVisible,
+  setIsTelegramModalVisible,
+}) => {
   return (
     <>
       <Navbar
@@ -20,7 +25,10 @@ const About = ({ popUpVisibility, changePopUpVisibility }) => {
         linkPathes={["/works", "/logos"]}
         linkTitles={["works", "logos"]}
       ></BigLink>
-      <Footer></Footer>
+      <Footer
+        isTelegramModalVisible={isTelegramModalVisible}
+        setIsTelegramModalVisible={setIsTelegramModalVisible}
+      ></Footer>
     </>
   );
 };

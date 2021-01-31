@@ -1,12 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./ProjectCard.module.css";
-export const ProjectCard = ({ alignSelf }) => {
-  const alignTitle = alignSelf === "flex-start" ? "left" : "right";
+export const ProjectCard = ({ alignRight, projTitle, projImg, projId }) => {
+  const isAlignedRight = alignRight ? 0 : null;
   return (
-    <div className={styles.cardContainer} style={{ alignSelf }}>
-      <h3 className={styles.cardTitle} style={{ textAlign: alignTitle }}>
-        Project Title
+    <div className={styles.cardContainer}>
+      <h3 className={styles.cardTitle} style={{ right: `${isAlignedRight}` }}>
+        {projTitle}
       </h3>
+      <div className={styles.cardImgContainer}>
+        <Link to={`/works/${projId}`}>
+          <img src={projImg} alt="" />
+        </Link>
+      </div>
     </div>
   );
 };

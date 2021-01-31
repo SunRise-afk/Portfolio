@@ -1,0 +1,68 @@
+.works {
+}
+.works .container {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 0 55px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.jumboContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px 0;
+}
+.jumboHeading {
+  font-family: "Roboto", serif;
+  font-size: 34px;
+  font-weight: 700;
+  margin: 0;
+}
+.jumboParagraph {
+  font-family: "Roboto", serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+.worksContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.worksContainer a {
+  width: 45%;
+}
+.itemContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+.imgContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgContainer img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #e9e9e9;
+}
+.titleHeading {
+  font-family: "Roboto", serif;
+  font-size: 23px;
+  font-weight: 700;
+  color: black;
+}
+.roleParagraph {
+  font-family: "Roboto", serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+}
