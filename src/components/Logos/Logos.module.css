@@ -45,3 +45,29 @@
   height: auto;
   border: 1px solid #e9e9e9;
 }
+@media (max-width: 1200px) {
+  .logos .container {
+    width: 95%;
+  }
+  .jumboHeading {
+    text-align: center;
+  }
+  .jumboParagraph {
+    text-align: center;
+  }
+  .logoItem {
+    width: 48%;
+  }
+}
+@media (max-width: 768px) {
+  .logos .container {
+    margin-bottom: 50px;
+  }
+  .logosItemsContainer {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .logoItem {
+    width: 90%;
+  }
+}

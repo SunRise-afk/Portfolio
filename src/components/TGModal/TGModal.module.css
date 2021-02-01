@@ -43,3 +43,28 @@
 .modal_container .info_container:hover p {
   color: black;
 }
+@media (max-width: 1200px) {
+  .modal_container {
+    clip-path: none;
+    left: 8%;
+    top: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .modal_container {
+    position: relative;
+    width: fit-content;
+    left: 0;
+    top: 0;
+    margin-bottom: 10px;
+    clip-path: polygon(
+      100% 100%,
+      0 100%,
+      0 10%,
+      45% 10%,
+      50% 0,
+      55% 10%,
+      100% 10%
+    );
+  }
+}

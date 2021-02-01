@@ -59,3 +59,39 @@
 .linkHeader:hover::before {
   transform: scaleY(0);
 }
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
+    height: 300px;
+    justify-content: space-around;
+  }
+  .linkContainer {
+    flex: 0;
+    width: 40%;
+  }
+  .linkHeader {
+    padding: 30%;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    height: 200px;
+  }
+  .linkContainer {
+    width: 40%;
+  }
+  .linkHeader {
+    font-size: 32px;
+  }
+}
+@media (max-width: 414px) {
+  .container {
+    height: 150px;
+  }
+  .linkContainer {
+    width: 40%;
+  }
+  .linkHeader {
+    font-size: 24px;
+  }
+}

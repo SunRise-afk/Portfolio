@@ -49,3 +49,8 @@
   text-decoration: none;
   font-family: "Roboto", serif;
 }
+@media (max-width: 414px) {
+  .buttonContainer span {
+    font-size: 15px;
+  }
+}

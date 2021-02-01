@@ -45,3 +45,28 @@
 .innerLink:hover {
   color: black;
 }
+@media (max-width: 1200px) {
+  .footer {
+    width: 95%;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .links {
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .innerLinks ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contacts {
+    text-align: center;
+  }
+}

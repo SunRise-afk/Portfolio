@@ -30,3 +30,25 @@
   margin: 0;
   font-size: 25px;
 }
+@media (max-width: 1200px) {
+  .cardsContainer {
+    width: 95%;
+  }
+  .cardContainer {
+    width: 90%;
+    height: fit-content;
+    border: none;
+  }
+  .cardContainer .cardImgContainer img {
+    border: 1px solid black;
+  }
+}
+@media (max-width: 768px) {
+  .cardsContainer {
+    width: 95%;
+  }
+  .cardContainer {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}

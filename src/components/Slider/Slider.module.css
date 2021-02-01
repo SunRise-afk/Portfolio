@@ -46,3 +46,28 @@
 .slide.active {
   opacity: 1;
 }
+@media (max-width: 1200px) {
+  .slider {
+    width: 95%;
+  }
+  .image {
+    max-width: 100%;
+    height: auto;
+  }
+  .leftArrow {
+    left: 8%;
+    top: 40%;
+  }
+  .rightArrow {
+    right: 8%;
+    top: 40%;
+  }
+}
+@media (max-width: 414px) {
+  .leftArrow {
+    font-size: 40px;
+  }
+  .rightArrow {
+    font-size: 40px;
+  }
+}
