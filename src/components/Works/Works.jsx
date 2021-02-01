@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import React from "react";
 import styles from "./Works.module.css";
+import { BigLink } from "../BigLink/BigLink";
 
 const Works = () => {
   const worksItems = useSelector((state) => state.works);
@@ -31,6 +32,10 @@ const Works = () => {
             })}
           </div>
         </div>
+        <BigLink
+          linkPathes={["/about", "/logos"]}
+          linkTitles={["about", "logos"]}
+        ></BigLink>
       </section>
       <Footer></Footer>
     </>

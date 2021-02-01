@@ -1,5 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import React from "react";
 import styles from "./BorderedButton.module.css";
 
 export const BorderedButton = ({ title, link }) => {

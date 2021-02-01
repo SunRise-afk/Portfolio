@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProjectCard.module.css";
 export const ProjectCard = ({ alignRight, projTitle, projImg, projId }) => {
-  const isAlignedRight = alignRight ? 0 : null;
+  const isAlignedRight = alignRight ? 0 : "";
   return (
     <div className={styles.cardContainer}>
       <h3 className={styles.cardTitle} style={{ right: `${isAlignedRight}` }}>
