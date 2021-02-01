@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Navbar } from "./components/Navbar/Navbar";
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense } from "react";
 import { Home } from "./components/Home/Home";
+import { useSelector } from "react-redux";
 import "./App.css";
 
 const About = lazy(() => import("./components/About/About"));
@@ -9,20 +10,15 @@ const WorksContainer = lazy(() => import("./components/Works/WorksContainer"));
 const Logos = lazy(() => import("./components/Logos/Logos"));
 
 function App() {
-  const [popUpVisibility, setPopUpVisibility] = useState(false);
-  const [isTelegramModalVisible, setIsTelegramModalVisible] = useState(false);
-  const changePopUpVisibility = (value) => {
-    setPopUpVisibility(value);
-  };
+  const popUpVisibility = useSelector(
+    (state) => state.appState.popUpVisibility
+  );
   return (
     <Router>
       <Suspense
         fallback={
           <>
-            <Navbar
-              changePopUpVisibility={changePopUpVisibility}
-              popUpVisibility={popUpVisibility}
-            ></Navbar>
+            <Navbar></Navbar>
             <h1 style={{ textAlign: "center", marginTop: "200px" }}>
               Loading... Please hold on.
             </h1>
@@ -30,56 +26,13 @@ function App() {
         }
       >
         {popUpVisibility ? (
-          <Navbar
-            changePopUpVisibility={changePopUpVisibility}
-            popUpVisibility={popUpVisibility}
-          ></Navbar>
+          <Navbar></Navbar>
         ) : (
           <Switch>
-            <Route
-              path="/about"
-              component={() => (
-                <About
-                  changePopUpVisibility={changePopUpVisibility}
-                  popUpVisibility={popUpVisibility}
-                  isTelegramModalVisible={isTelegramModalVisible}
-                  setIsTelegramModalVisible={setIsTelegramModalVisible}
-                />
-              )}
-            ></Route>
-            <Route
-              path="/works"
-              component={() => (
-                <WorksContainer
-                  changePopUpVisibility={changePopUpVisibility}
-                  popUpVisibility={popUpVisibility}
-                  isTelegramModalVisible={isTelegramModalVisible}
-                  setIsTelegramModalVisible={setIsTelegramModalVisible}
-                />
-              )}
-            ></Route>
-            <Route
-              path="/logos"
-              component={() => (
-                <Logos
-                  changePopUpVisibility={changePopUpVisibility}
-                  popUpVisibility={popUpVisibility}
-                  isTelegramModalVisible={isTelegramModalVisible}
-                  setIsTelegramModalVisible={setIsTelegramModalVisible}
-                />
-              )}
-            ></Route>
-            <Route
-              path="/"
-              component={() => (
-                <Home
-                  changePopUpVisibility={changePopUpVisibility}
-                  popUpVisibility={popUpVisibility}
-                  isTelegramModalVisible={isTelegramModalVisible}
-                  setIsTelegramModalVisible={setIsTelegramModalVisible}
-                />
-              )}
-            ></Route>
+            <Route path="/about" component={() => <About />}></Route>
+            <Route path="/works" component={() => <WorksContainer />}></Route>
+            <Route path="/logos" component={() => <Logos />}></Route>
+            <Route path="/" component={() => <Home />}></Route>
           </Switch>
         )}
       </Suspense>

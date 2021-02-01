@@ -8,19 +8,11 @@ import { ProjectCardsContainer } from "../HomeProjectCard/ProjectCardsContainer"
 import { Jumbotron } from "../Jumbotron/Jumbotron";
 import { Navbar } from "../Navbar/Navbar";
 
-export const Home = ({
-  popUpVisibility,
-  changePopUpVisibility,
-  isTelegramModalVisible,
-  setIsTelegramModalVisible,
-}) => {
+export const Home = () => {
   const projects = useSelector((state) => state.works);
   return (
     <>
-      <Navbar
-        changePopUpVisibility={changePopUpVisibility}
-        popUpVisibility={popUpVisibility}
-      ></Navbar>
+      <Navbar></Navbar>
       <Jumbotron></Jumbotron>
       <ProjectCardsContainer>
         <ProjectCard
@@ -41,10 +33,7 @@ export const Home = ({
         linkPathes={["/about", "/logos"]}
         linkTitles={["about", "logos"]}
       ></BigLink>
-      <Footer
-        isTelegramModalVisible={isTelegramModalVisible}
-        setIsTelegramModalVisible={setIsTelegramModalVisible}
-      ></Footer>
+      <Footer></Footer>
     </>
   );
 };

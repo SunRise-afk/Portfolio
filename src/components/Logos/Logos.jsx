@@ -1,24 +1,13 @@
-import React from "react";
 import { Footer } from "../Footer/Footer";
 import { Navbar } from "../Navbar/Navbar";
+import React from "react";
 
-const Logos = ({
-  popUpVisibility,
-  changePopUpVisibility,
-  isTelegramModalVisible,
-  setIsTelegramModalVisible,
-}) => {
+const Logos = () => {
   return (
     <>
-      <Navbar
-        changePopUpVisibility={changePopUpVisibility}
-        popUpVisibility={popUpVisibility}
-      ></Navbar>
+      <Navbar></Navbar>
       <h1>Logos Page</h1>
-      <Footer
-        isTelegramModalVisible={isTelegramModalVisible}
-        setIsTelegramModalVisible={setIsTelegramModalVisible}
-      ></Footer>
+      <Footer></Footer>
     </>
   );
 };

@@ -2,25 +2,17 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { Navbar } from "../Navbar/Navbar";
 import { Footer } from "../Footer/Footer";
-import React from "react";
-import styles from "./SingleProject.module.css";
-import borderedButtonStyles from "../BorderedButton/BorderedButton.module.css";
 import { BorderedButton } from "../BorderedButton/BorderedButton";
+import React from "react";
+import borderedButtonStyles from "../BorderedButton/BorderedButton.module.css";
+import styles from "./SingleProject.module.css";
 
-const SingleProject = ({
-  popUpVisibility,
-  changePopUpVisibility,
-  isTelegramModalVisible,
-  setIsTelegramModalVisible,
-}) => {
+const SingleProject = () => {
   const { projId } = useParams();
   const project = useSelector((state) => state.works[projId]);
   return (
     <>
-      <Navbar
-        changePopUpVisibility={changePopUpVisibility}
-        popUpVisibility={popUpVisibility}
-      ></Navbar>
+      <Navbar></Navbar>
       <section className={styles.singleProject}>
         <div className={styles.container}>
           <div className={styles.jumboImgContainer}>
@@ -76,10 +68,7 @@ const SingleProject = ({
           ></BorderedButton>
         </div>
       </section>
-      <Footer
-        isTelegramModalVisible={isTelegramModalVisible}
-        setIsTelegramModalVisible={setIsTelegramModalVisible}
-      ></Footer>
+      <Footer></Footer>
     </>
   );
 };

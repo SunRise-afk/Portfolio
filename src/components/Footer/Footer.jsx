@@ -1,12 +1,15 @@
-import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { setTGModalVisibilityAC } from "../../redux/appStateReducer";
 import { TGModal } from "../TGModal/TGModal";
+import React from "react";
 import styles from "./Footer.module.css";
 
-export const Footer = ({
-  isTelegramModalVisible,
-  setIsTelegramModalVisible,
-}) => {
+export const Footer = () => {
+  const isTelegramModalVisible = useSelector(
+    (state) => state.appState.isTelegramModalVisible
+  );
+  const dispatch = useDispatch();
   return (
     <footer className={styles.footer}>
       <div className={styles.contacts}>
@@ -23,7 +26,7 @@ export const Footer = ({
         </a>
         <p
           onClick={() => {
-            setIsTelegramModalVisible(!isTelegramModalVisible);
+            dispatch(setTGModalVisibilityAC());
           }}
         >
           Telegram

@@ -1,13 +1,19 @@
-import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { setPopUpVisibilityAC } from "../../redux/appStateReducer";
 import { MenuPopup } from "./MenuPopup";
+import React from "react";
 import styles from "./Navbar.module.css";
 
-export const Navbar = ({ popUpVisibility, changePopUpVisibility }) => {
+export const Navbar = () => {
+  const popUpVisibility = useSelector(
+    (state) => state.appState.popUpVisibility
+  );
+  const dispatch = useDispatch();
   return (
     <>
       {popUpVisibility ? (
-        <MenuPopup visibilityChangeHandler={changePopUpVisibility}></MenuPopup>
+        <MenuPopup></MenuPopup>
       ) : (
         <nav className={styles.nav}>
           <Link to="/">
@@ -26,7 +32,7 @@ export const Navbar = ({ popUpVisibility, changePopUpVisibility }) => {
           </Link>
           <h2
             className={styles.navMenuHeader}
-            onClick={() => changePopUpVisibility(true)}
+            onClick={() => dispatch(setPopUpVisibilityAC())}
           >
             Menu
           </h2>

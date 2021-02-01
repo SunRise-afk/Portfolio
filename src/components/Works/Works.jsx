@@ -6,19 +6,11 @@ import { Link } from "react-router-dom";
 import React from "react";
 import styles from "./Works.module.css";
 
-const Works = ({
-  popUpVisibility,
-  changePopUpVisibility,
-  isTelegramModalVisible,
-  setIsTelegramModalVisible,
-}) => {
+const Works = () => {
   const worksItems = useSelector((state) => state.works);
   return (
     <>
-      <Navbar
-        changePopUpVisibility={changePopUpVisibility}
-        popUpVisibility={popUpVisibility}
-      ></Navbar>
+      <Navbar></Navbar>
       <section className={styles.works}>
         <div className={styles.container}>
           <div className={styles.jumboContainer}>
@@ -40,11 +32,7 @@ const Works = ({
           </div>
         </div>
       </section>
-
-      <Footer
-        isTelegramModalVisible={isTelegramModalVisible}
-        setIsTelegramModalVisible={setIsTelegramModalVisible}
-      ></Footer>
+      <Footer></Footer>
     </>
   );
 };
