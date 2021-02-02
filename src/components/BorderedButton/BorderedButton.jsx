@@ -4,7 +4,7 @@ import styles from "./BorderedButton.module.css";
 
 export const BorderedButton = ({ title, link }) => {
   return (
-    <Link to={`/${link}`}>
+    <Link to={`/Portfolio/${link}`}>
       <div className={styles.buttonContainer}>
         <span>{title}</span>
       </div>

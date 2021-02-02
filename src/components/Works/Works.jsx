@@ -21,7 +21,7 @@ const Works = () => {
           <div className={styles.worksContainer}>
             {worksItems.map((work) => {
               return (
-                <Link to={`/works/${work.id}`} key={work.id}>
+                <Link to={`/Portfolio/works/${work.id}`} key={work.id}>
                   <WorkItem
                     title={work.title}
                     role={work.role}

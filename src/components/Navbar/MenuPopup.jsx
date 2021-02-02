@@ -13,16 +13,16 @@ export const MenuPopup = () => {
     <nav className={styles.menu}>
       <h2 className={styles.menuLogo}>SunRise Portfolio</h2>
       <ul className={styles.menuList}>
-        <Link to="/" onClick={closePopUpHandler}>
+        <Link to="/Portfolio/" onClick={closePopUpHandler}>
           <li>Home</li>
         </Link>
-        <Link to="/works" onClick={closePopUpHandler}>
+        <Link to="/Portfolio/works" onClick={closePopUpHandler}>
           <li>Works</li>
         </Link>
-        <Link to="/logos" onClick={closePopUpHandler}>
+        <Link to="/Portfolio/logos" onClick={closePopUpHandler}>
           <li>Logo Collection</li>
         </Link>
-        <Link to="/about">
+        <Link to="/Portfolio/about">
           <li onClick={closePopUpHandler}>About & Contacts</li>
         </Link>
         <li className={styles.closeButton} onClick={closePopUpHandler}></li>

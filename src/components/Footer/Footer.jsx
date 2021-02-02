@@ -50,22 +50,22 @@ export const Footer = () => {
       <div className={styles.innerLinks}>
         <ul>
           <li>
-            <Link to="/" className={styles.innerLink}>
+            <Link to="/Portfolio/" className={styles.innerLink}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/works" className={styles.innerLink}>
+            <Link to="/Portfolio/works" className={styles.innerLink}>
               Works
             </Link>
           </li>
           <li>
-            <Link to="/logos" className={styles.innerLink}>
+            <Link to="/Portfolio/logos" className={styles.innerLink}>
               Logo Collection
             </Link>
           </li>
           <li>
-            <Link to="/about" className={styles.innerLink}>
+            <Link to="/Portfolio/about" className={styles.innerLink}>
               About & Contacts
             </Link>
           </li>

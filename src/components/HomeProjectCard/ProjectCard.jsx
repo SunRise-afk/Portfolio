@@ -9,7 +9,7 @@ export const ProjectCard = ({ alignRight, projTitle, projImg, projId }) => {
         {projTitle}
       </h3>
       <div className={styles.cardImgContainer}>
-        <Link to={`/works/${projId}`}>
+        <Link to={`/Portfolio/works/${projId}`}>
           <img src={projImg} alt="" />
         </Link>
       </div>

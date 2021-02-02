@@ -16,7 +16,7 @@ export const Navbar = () => {
         <MenuPopup></MenuPopup>
       ) : (
         <nav className={styles.nav}>
-          <Link to="/">
+          <Link to="/Portfolio/">
             <h2
               data-text="SunRise Portfolio"
               className={`${styles.navHeader}`}

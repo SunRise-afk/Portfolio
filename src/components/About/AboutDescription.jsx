@@ -39,6 +39,7 @@ export const AboutDescription = () => {
           <h2>Why am i doing this</h2>
           <p>Cause i like it</p>
           <p>Cause i need it</p>
+          <p>Cause i get it</p>
         </div>
       </div>
       <div className={styles.descriptionRow}>

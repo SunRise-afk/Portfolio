@@ -29,10 +29,13 @@ function App() {
           <Navbar></Navbar>
         ) : (
           <Switch>
-            <Route path="/about" component={() => <About />}></Route>
-            <Route path="/works" component={() => <WorksContainer />}></Route>
-            <Route path="/logos" component={() => <Logos />}></Route>
-            <Route path="/" component={() => <Home />}></Route>
+            <Route path="/Portfolio/about" component={() => <About />}></Route>
+            <Route
+              path="/Portfolio/works"
+              component={() => <WorksContainer />}
+            ></Route>
+            <Route path="/Portfolio/logos" component={() => <Logos />}></Route>
+            <Route path="/Portfolio/" component={() => <Home />}></Route>
           </Switch>
         )}
       </Suspense>
