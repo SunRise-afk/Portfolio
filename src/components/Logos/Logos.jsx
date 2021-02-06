@@ -1,10 +1,10 @@
-import { Footer } from "../Footer/Footer";
-import { Navbar } from "../Navbar/Navbar";
-import React from "react";
-import styles from "./Logos.module.css";
-import { useSelector } from "react-redux";
-import { BorderedButton } from "../BorderedButton/BorderedButton";
-import { BigLink } from "../BigLink/BigLink";
+import { Footer } from '../Footer/Footer';
+import { Navbar } from '../Navbar/Navbar';
+import React from 'react';
+import styles from './Logos.module.css';
+import { useSelector } from 'react-redux';
+import { BorderedButton } from '../BorderedButton/BorderedButton';
+import { BigLink } from '../BigLink/BigLink';
 
 const Logos = () => {
   const works = useSelector((state) => state.works);
@@ -20,7 +20,7 @@ const Logos = () => {
           <div className={styles.logosItemsContainer}>
             {works.map((work) => {
               return (
-                <div className={styles.logoItem}>
+                <div className={styles.logoItem} key={work.id}>
                   <img src={work.titleImg} alt="" />
                 </div>
               );
@@ -29,8 +29,8 @@ const Logos = () => {
           <BorderedButton title="all works" link="works"></BorderedButton>
         </div>
         <BigLink
-          linkPathes={["/works", "/about"]}
-          linkTitles={["works", "about"]}
+          linkPathes={['/works', '/about']}
+          linkTitles={['works', 'about']}
         ></BigLink>
       </section>
       <Footer></Footer>
