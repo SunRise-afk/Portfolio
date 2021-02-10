@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.c1837f91.chunk.css",
-    "main.js": "/Portfolio/static/js/main.ea1650d9.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.ea1650d9.chunk.js.map",
+    "main.js": "/Portfolio/static/js/main.02727c2e.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.02727c2e.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.3738fb82.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.3738fb82.js.map",
     "static/js/2.0e9f0157.chunk.js": "/Portfolio/static/js/2.0e9f0157.chunk.js",
@@ -41,6 +41,11 @@
     "static/media/axitShowcaseImg2.19ac864c.jpg": "/Portfolio/static/media/axitShowcaseImg2.19ac864c.jpg",
     "static/media/axitShowcaseImg3.aee9b151.jpg": "/Portfolio/static/media/axitShowcaseImg3.aee9b151.jpg",
     "static/media/axitTitle.4a9e5dcf.jpg": "/Portfolio/static/media/axitTitle.4a9e5dcf.jpg",
+    "static/media/easybankJumbo.5b2e9daa.jpg": "/Portfolio/static/media/easybankJumbo.5b2e9daa.jpg",
+    "static/media/easybankShowcaseImg1.32138ef9.jpg": "/Portfolio/static/media/easybankShowcaseImg1.32138ef9.jpg",
+    "static/media/easybankShowcaseImg2.3942903c.jpg": "/Portfolio/static/media/easybankShowcaseImg2.3942903c.jpg",
+    "static/media/easybankShowcaseImg3.20617412.jpg": "/Portfolio/static/media/easybankShowcaseImg3.20617412.jpg",
+    "static/media/easybankTitle.c484812c.jpg": "/Portfolio/static/media/easybankTitle.c484812c.jpg",
     "static/media/front.720c3697.png": "/Portfolio/static/media/front.720c3697.png",
     "static/media/full_stack.3434fa40.png": "/Portfolio/static/media/full_stack.3434fa40.png",
     "static/media/leospaJumbo.c879ad65.jpg": "/Portfolio/static/media/leospaJumbo.c879ad65.jpg",
@@ -73,6 +78,6 @@
     "static/js/runtime-main.3738fb82.js",
     "static/js/2.0e9f0157.chunk.js",
     "static/css/main.c1837f91.chunk.css",
-    "static/js/main.ea1650d9.chunk.js"
+    "static/js/main.02727c2e.chunk.js"
   ]
 }
