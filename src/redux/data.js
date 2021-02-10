@@ -40,6 +40,12 @@ import memoriesShowcaseImg1 from '../assets/projectImages/memoriesShowcaseImg1.j
 import memoriesShowcaseImg2 from '../assets/projectImages/memoriesShowcaseImg2.jpg';
 import memoriesShowcaseImg3 from '../assets/projectImages/memoriesShowcaseImg3.jpg';
 
+import easybankTitle from '../assets/projectImages/easybankTitle.jpg';
+import easybankJumbo from '../assets/projectImages/easybankJumbo.jpg';
+import easybankShowcaseImg1 from '../assets/projectImages/easybankShowcaseImg1.jpg';
+import easybankShowcaseImg2 from '../assets/projectImages/easybankShowcaseImg2.jpg';
+import easybankShowcaseImg3 from '../assets/projectImages/easybankShowcaseImg3.jpg';
+
 const data = [
   {
     id: 0,
@@ -110,6 +116,23 @@ const data = [
   },
   {
     id: 4,
+    title: 'Easybank',
+    description:
+      "Easybank is a landing for bank. It consists a simple page made of sections (hero, product features and articles). The overall design looks modern, pleasant and eye-catching. It's a realy great option if you need landing page for your bank. Responsive design is included. Page was builded for mobile-first.",
+    usedTechnologies:
+      'Landing was created using HTML styled with SCSS and builded using Webpack.',
+    date: '2021',
+    role:
+      'Branding, Visual Identity, Web Design, Illustration, FrontEnd Development, Gain Experience',
+    link: 'https://sunrise-afk.github.io/Easybank/',
+    jumboImg: easybankJumbo,
+    titleImg: easybankTitle,
+    showcaseImg1: easybankShowcaseImg1,
+    showcaseImg2: easybankShowcaseImg2,
+    showcaseImg3: easybankShowcaseImg3,
+  },
+  {
+    id: 5,
     title: 'AppLab',
     description:
       "AppLab is a layout for presenting apps. It consists a simple page made of sections (hero, pricing tables, product features and more). The overall design looks modern, pleasant and eye-catching. It's a realy great option if you need landing page for your startup!",
@@ -126,7 +149,7 @@ const data = [
     showcaseImg3: applabShowcaseImg3,
   },
   {
-    id: 5,
+    id: 6,
     title: 'Minimo',
     description:
       'Minimo is a minimal but elegant layout. Minimo providing well organised sections and that makes minimo realy easy to customize for your needs. Responsive design is included.',
@@ -143,7 +166,7 @@ const data = [
     showcaseImg3: minimoShowcaseImg3,
   },
   {
-    id: 6,
+    id: 7,
     title: 'Leospa',
     description:
       'Leospa is a landing page for Spa and beauty centers that can be used to get started with a new website for your business. This layout is basically made of a single page of sections (hero, features, testimonial, blog, contact, form, etc.). Responsive design is included.',
